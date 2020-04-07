@@ -1,0 +1,32 @@
+ch05_jsp프로젝트 (ch05_jsp contextRoot)
+
+0. 톰캣이 웹어플리케이션을 실행할 수 있도록 배포
+    (wtpwebpapps & work 폴더)
+소스폴더 : D:\mega_IT\source\6_jsp\ch05_jsp\
+
+실행폴더 : D:\mega_IT\IDE\apache-tomcat-9.0.30\wtpwebapps\ch05_jsp
+
+jsp를 서블릿으로 바꾸는 폴더 :
+D:\mega_IT\IDE\apache-tomcat-9.0.30\work\Catalina\localhost\ch05_jsp\org\apache\jsp
+
+1. 내가 사용자가 사용하도록 웹어플리케이션을 배포
+    (webapps 폴더)
+
+1-1. 톰캣의 webapps폴더 밑에 xx폴더를 생성
+1-2. d:/mega_IT/source/6_jsp/ch05_jsp/webContent에 있는 모든 내용을 xx폴더 밑에 복사
+1-3. D:/mega_IT/source/6_jsp/ch05_jsp/build밑에 있는 classes폴더를 XX/WEB-INF 밑에 통복사
+1-4. 톰캣을 재부팅
+
+http://localhost:8181/xx
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+drop table BOARD;
+DROP TABLE ADMIN;
+CREATE TABLE ADMIN(
+    aId VARCHAR2(30) PRIMARY KEY,
+    aName VARCHAR2(30) NOT NULL);
+INSERT INTO ADMIN VALUES ('a1','김관리');
+INSERT INTO ADMIN VALUES ('a2','홍관리');
+select * from admin;
+DROP TABLE MEMBER;
+CREATE TABLE MEMBER(
+    mID VARCHAR2(30) PRIMARY KEY,
+    mNAME VARCHAR2(30) );
+INSERT INTO MEMBER VALUES ('m1','이이이');
+INSERT INTO MEMBER VALUES ('m2','박박박');
+select * from member;
+DROP TABLE BOARD;
+CREATE TABLE BOARD(
+    bId NUMBER(6) PRIMARY KEY,
+    mId VARCHAR2(30) REFERENCES MEMBER(MID),
+    aId VARCHAR2(30) REFERENCES ADMIN(aId),
+    bTitle VARCHAR2(100) NOT NULL,
+    bRdate    DATE DEFAULT SYSDATE,
+    bHit     NUMBER(6) DEFAULT 0);
+INSERT INTO BOARD values (1, 'm1', null, '제목',sysdate, 0);
+INSERT INTO BOARD values (3, 'm2', null, '제목',sysdate, 0);
+INSERT INTO BOARD values (2, null, 'a1', '제목',sysdate, 0);
+INSERT INTO BOARD values (4, null, 'a2', '제목',sysdate, 0);
+select BID, (SELECT MNAME FROM BOARD B, MEMBER M WHERE B.MID=M.MID AND board.BID=BID)|| 
+        (SELECT ANAME FROM BOARD B, ADMIN A WHERE A.AID=B.AID AND board.BID=BID) WRITER,
+    bTitle, bhit 
+    from board ORDER BY bRDATE DESC;

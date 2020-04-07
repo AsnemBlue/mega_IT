@@ -1,0 +1,18 @@
+$('선택자').함수();
+  1. hide()
+  2. show()
+  3. toggle()
+  4. html()  해당 선택자 안에 html코드 삽입★
+  5. text()   해당 선택자 안에 text 삽입
+  6. val('변형될 value') ; value값 변형★
+  7. css('속성', '속성값')
+  8. each ; 배열 처리함수 
+  9. addClass ; 클래스 추가
+  10. removeClass ; 클래스 삭제
+  11. append
+  12. prepend
+  13. attr 
+  ※ 이벤트 관련 함수들
+     click(콜백함수), focus(콜백함수), etc...
+     off(), trigger()..
+  ※ aJax관련 함수들 : $.get(), $.post(), $.ajax() ★

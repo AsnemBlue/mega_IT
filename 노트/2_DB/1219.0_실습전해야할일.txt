@@ -1,0 +1,41 @@
+1. 오락클 깔고, cmd창을 띄워 다음을 실행한다
+2. c:\>sqlplus "/as sysdba
+   c:\>sqlplus system/oracle비번
+           ----시스템권한으로 오라클DB에 접근한다
+   sqlplus system/oracle ----관리자계정으로 접근한다
+3. SQL>create user scott identified by tiger;
+           --- scott이라는 ID를 만든다.
+4. SQL>grant dba to scott; -- scott을 dba권한으로
+
+5. SQL>exit
+6. c:/>sqlplus scott/tiger 들어가는 명령
+7. SQL>@d:/mega-IT/demo.sql  화일을 수행 (기본 데이터를 넣는 명령등 모음)
+
+   SQL>SELECT * FROM TAB;
+       DESC DEPT;
+       SELECT * FROM EMP;
+       DESC EMP;
+
+
+    데이터모델링 툴 exERD 툴 인스톨하여 모델링을 하여 본다
+	(DB의 생명주기 : 요구조건분석 - 설계 - 구현 - 운영 - 감시 및 개선)
+
+    이클립스에 Help-> Install New Software에 http://exerd.com/update로 plug in한다. 최종 소스의 모델링을 해본다
+
+
+  - 식별관계 : 부모테이브르이 주키가 자식테이블의 주키 or 주키군에 속한 관계
+  - 비식별관계 : 부모테이블의 주키가 자식테이블의 일반속성에 속한 관계
+
+
+
+사용자 삭제 : drop user scott cascade;
+
+
+   SQL>create user kim identified by 1111; -- kim 계정 생성
+   SQL>grant dba to kim;    -- kim 계정에 dba권한 부여
+       grant connect,resource to kim; - 리소스작업과 접속권한 줌
+   SQL>revoke dba from kim; --kim의 권한 박탈
+   SQL>drop user kim cascade; -- kim 계정 삭제
+   SQL>grant create session to kim -- kim이 접속할 권한 부여
+
+

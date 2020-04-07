@@ -1,0 +1,32 @@
+1~4 다음과 같은 구조의 테이블을 생성하고 데이터를 입력하는 SQL문을 작성.
+  
+[ customer 테이블 ] - cno가 주키, phone은 다른사람과 다르게 입력되도록 제한함
+		      joindate는 입력하지 않을시 현재날짜로 입력
+  cno    cname   joindate    phone         point  levelno
+   1   홍길동   17/10/17  010-9999-9999     300     1
+   2   이철수   16/09/06  010-9999-9888    NULL     2
+   3   홍길순   16/09/07  010-9999-7777      50     3
+[ cus_level 테이블 ] - levelno가 주키, levelname은 NOT NULL 조건.
+       levelno     levelname
+   	1            VVIP
+   	2             VIP           
+   	3            NORMAL
+   	4            BLACK
+조건① CUSTOMER 테이블이 있을 시, 테이블을 삭제하고 테이블을 생성하시오
+조건② CUSTOMER 테이블은 필드별로 다음의 제약조건을 지킨다.
+	CNO : 주키
+	CNAME : NULL값을 입력할 수 없다
+	JOINDATE : 입력하지 않을 시, 기본적으로 현재날짜로 입력된다
+	PHONE : 모든 데이터는 PHONE 값이 모두 다르게 입력된다
+	LEVELNO : CUS_LEVEL 테이블의 LEVELNO 필드를 참조하는 외래키
+
+조건③ CUS_LEVEL 테이블은 필드별로 다음의 제약조건을 지킨다
+	LEVELNO : 주키
+	LEVELNAME : NULL값을 입력할 수 없다
+조건④ CUSTOMER 테이블의 CNO번호는 시퀀스(CUS_SQ)를 생성한 뒤 자동생성 번호로 입력되도록 한다.
+
+5. 위와 같은 두개의 테이블을 이용하여 아래와 같이 출력하는 SQL문도 작성하시오
+  cno    cname   joindate    phone         point  levelname
+   1   홍길동   2017-10-17  010-9999-9999     300     VVIP
+   2   이철수   2016-09-06  010-9999-9888  (NULL)     VIP
+   3   홍길순   2016-09-07  010-9999-7777      50     NORMAL
