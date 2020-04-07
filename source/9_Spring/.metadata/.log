@@ -959,3 +959,9 @@ java.lang.NoSuchMethodError: org.eclipse.jdt.internal.ui.text.correction.AssistC
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2020-04-07 13:12:42.594
 !MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-04-07 13:19:17.782
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-04-07 13:19:17.784
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
