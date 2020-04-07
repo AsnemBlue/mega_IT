@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  header .lnb {
+    overflow: hidden;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+    position: absolute;
+    z-index: 9999;
+  }
+
+    header .lnb ul {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+      header .lnb ul > li {
+        margin: 5px;
+        float: left;
+        padding: 5px 37px;
+        line-height: 25px;
+        border-top: 1px dashed #8A523F;
+        border-bottom: 1px dashed #8A523F;
+      }
+
+    header .lnb a {
+      height: 1.1em;
+      color: #A47160;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+      header .lnb a:hover {
+        color: white;
+        background-color: #D4A190;
+      }
+
+    header .lnb ul .subMenu {
+      margin-top: 5px;
+    }
+
+      header .lnb ul .subMenu li {
+        padding-top: 2px;
+      }
+
+    header .lnb ul .subMenu {
+      display: none;
+    }
+
+    header .lnb ul:hover .subMenu {
+      display: block;
+    }
+
+    header .lnb ul li:hover .subMenu a {
+      color: #441100;
+    }
+
+  #content {
+    width: 1000px;
+    margin: 80px auto 0;
+    padding: 20px;
+    background-color: lightgray;
+  }
+</style>
+</head>
+<body>
+	<header>
+		<h1>TEST</h1>
+		<div class="lnb">
+			<ul >
+				<li><a href="mm">MENU_01</a>
+					<ol class="subMenu">
+						<li><a href="#m1">submenu1</a></li>
+						<li><a href="#m2">submenu2</a></li>
+						<li><a href="#m3">submenu3</a></li>
+					</ol>
+				</li>
+				<li><a href="#none">MENU_02</a>
+					<ol class="subMenu">
+						<li><a href="#m1">submenu1</a></li>
+						<li><a href="#m2">submenu2</a></li>
+						<li><a href="#m3">submenu3</a></li>
+					</ol>
+				</li>
+        <li><a href="none">MENU_03</a>
+          <ol class="subMenu">
+						<li><a href="#m1">submenu1</a></li>
+						<li><a href="#m2">submenu2</a></li>
+						<li><a href="#m3">submenu3</a></li>
+					</ol>
+         </li>
+         <li><a href="noe">MENU_04</a>
+           <ol class="subMenu">
+						<li><a href="#m1">submenu1</a></li>
+						<li><a href="#m2">submenu2</a></li>
+						<li><a href="#m3">submenu3</a></li>
+					  </ol>
+         </li>
+         <li><a href="../main/modify.html">MENU_05</a>
+           <ol class="subMenu">
+						<li><a href="#m1">submenu1</a></li>
+						<li><a href="#m2">submenu2</a></li>
+						<li><a href="#m3">submenu3</a></li>
+					</ol>
+         </li>
+			</ul>
+		</div>
+	</header>
+  <div id="content">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  </div>
+</body>
+</html>

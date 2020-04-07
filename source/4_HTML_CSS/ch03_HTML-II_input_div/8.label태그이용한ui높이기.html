@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        b{color:red;}
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>필드 유효성 검사 및 ui 높이기</legend>
+            <p><label for="name">이름 <b>*</b></label>
+                <input type="text" name="name" id="name" required="required"
+                       autofocus="autofocus"/>
+            </p>
+            <p><label for="pw">비밀번호 <b>*</b></label>
+               <input type="password" name="pw" id="pw" required="required" />
+            </p>
+            <p><label for="tel">전화번호 </label>
+                <input type="text" name="tel" id="tel" />
+            </p>
+            <p><center><input type="submit" value="전송" />
+                       <input type="reset" value="취소" />
+               </center>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+SELECT * FROM EMP;
+select * from emp;
+SELECT * FROM EMP WHERE ENAME LIKE '%'||'A'||'%' AND JOB LIKE '%E%';
+SELECT COUNT(*) FROM EMP;

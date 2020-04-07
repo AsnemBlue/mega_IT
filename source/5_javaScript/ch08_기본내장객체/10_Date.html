@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var today = new Date();   // 1/29 오전 10:20
+        var limitday = new Date();
+        document.write('오늘날짜시간 : ' + today.toLocaleString()+'<br>');
+        document.write('오 늘 날 짜 : ' + today.toLocaleDateString()+'<br>');
+        document.write('지 금 시 간 : ' + today.toLocaleTimeString() + '<br>');
+        limitday.setDate(today.getDate() + 14); // today가 2주후로 setting
+        document.write('2주후의 시점 : ' + limitday.toLocaleString() + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="#" method="get">
+        <table border="1">
+            <caption><h2>게시판</h2></caption>
+            <tr>
+                <td>제목</td><td><input type="text" name="title" size="29"
+                                      required="required"/></td>
+            </tr>
+            <tr>
+                <td>작성자</td><td><input type="text" name="name" size="29"
+                                       required="required"/></td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td><textarea cols="30" rows="5" name="content"></textarea></td>
+            </tr>
+            <tr>
+                <td>첨부파일</td>
+                <td><input type="file" name="file" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center>
+                        <input type="submit" value="입력완료" />
+                        <input type="reset" value="입력취소" />
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

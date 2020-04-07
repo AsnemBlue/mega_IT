@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+	/* 수학 연습 페이지!!
+	1단계 	[  xx  ] +  [ xx  ] = [답        ]
+		[답  ]에 클릭하는 순간 입력이 가능하게 text가 사라진다.
+		"채점해봐" 버튼을 클릭하면 정답 or 오답이 출력
+		"다시해봐" 버튼을 클릭하면 다시 reset
+
+	2단계 	[  xx  ] @  [ xx  ] = [답        ]
+	              Math.random()을 확용하여 사칙연산까지 임의로 출력
+	     "채점해봐" 버튼을 클릭하면 정답 or 오답이 출력
+	     "다시해봐" 버튼을 클릭하면 다시 reset
+	3단계(숙제)
+	  - 문제 5문제를 시간 count down 처리해서 
+	     몇 초만에 몇점인지 출력
+	*/
+		$(document).ready(function(){
+			$('input[name="n1"]').val(parseInt(Math.random()*10));
+			$('input[name="n2"]').val(parseInt(Math.random()*10));
+			$('#cal').click(function(){
+				var n1 = Number($('input[name="n1"]').val());
+				var n2 = Number($('input[name="n2"]').val());
+				var answer = n1 + n2;
+				if($('input[name="answer"]').val() == answer ){
+					$('.result').html(n1+'+'+n2+'='
+									+answer+'는 맞습니다').css('color','blue');
+				}else{
+					$('.result').html(n1+'+'+n2+'='
+						+$('input[name="answer"]').val()+'는 틀립니다').css('color','red');
+				}
+			});
+			$('#reset').click(function(){
+				$('input[name="n1"]').val(parseInt(Math.random()*10));
+				$('input[name="n2"]').val(parseInt(Math.random()*10));
+				$('input[name="answer"]').val('');
+				$('.result').html('');
+			});
+		});
+	</script>
+	<style>
+		p, h1 {text-align: center;}
+		button{padding:10px; margin: 10px 40px;}
+	</style>
+</head>
+<body>
+	<p>
+		1단계 : 
+		<input type="text" name="n1" size="5" readonly="readonly"> +
+		<input type="text" name="n2" size="5" readonly="readonly"> =
+		<input type="text" placeholder="답" name="answer" size="5">
+	</p>
+	<p><button id="reset">다시해봐</button>	<button id="cal">채점해봐</button></p>
+	<hr>
+	<h1 class="result"></h1>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            //.header 첫번째 하나 - 문서객체가져오기5방법
+            var header1 = document.querySelector('.header');
+            // .header 다 headers (배열로 받음) - 문서객체가져오기6방법
+            var headers = document.querySelectorAll('.header');
+            header1.innerHTML = '바꿔'
+            for (var idx in headers) {
+                //headers[idx].style.color = 'red';
+                //headers[idx].style.backgroundColor = 'yellow';
+                headers[idx].style.cssText
+                    = 'color:red;background-color:yellow;';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1 class="header">HEADER</h1>
+    <h1 class="header">HEADER</h1>
+</body>
+</html>

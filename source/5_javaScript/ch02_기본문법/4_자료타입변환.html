@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var str;
+        document.write('str의 타입:' + typeof (str) + ' - 내용:' + str + '<br>');
+        str = 10;
+        document.write('str의 타입:' + typeof (str) + ' - 내용:' + str + '<br>');
+        str = 'hello';
+        document.write('str의 타입:' + typeof (str) + ' - 내용:' + str + '<br>');
+        str = true;
+        document.write('str의 타입:' + typeof (str) + ' - 내용:' + str + '<br>');
+        str = function () { alert('경고창뿌려지나'); };
+        document.write('str의 타입:' + typeof (str) + ' - 내용:' + str + '<br>');
+        str = { 'name': '홍길동', 'age': 32, 'address': '서울시 ' };
+        document.write('str의 타입:' + typeof (str) + ' - 내용:' + str + '<br>');
+        str = [1, 'string', true];
+        str.push(2);
+        document.write('str의 타입:' + typeof (str) + ' - 내용:' + str + '<br>');
+    </script>
+</head>
+<body></body>
+</html>

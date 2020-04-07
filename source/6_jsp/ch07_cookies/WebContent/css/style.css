@@ -1,0 +1,9 @@
+@charset "UTF-8";
+body { 
+	background-color: #FFF0B5; 
+	font-size: 9pt;
+}
+table{ background-color: #FFE271; border: pink solid 2px; margin: 0 auto;}
+tr {background-color: #FFE271; }
+td, th { text-align: center; padding: 5px;}
+caption { font-size: 20px; }

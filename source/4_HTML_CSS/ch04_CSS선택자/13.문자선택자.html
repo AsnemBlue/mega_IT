@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap {width:600px; margin:0 auto;}
+        #wrap #header {border-bottom : 1px solid #cccccc;text-align:center;}
+
+        #wrap #content p:nth-child(2):first-line, p:nth-child(3):first-line{
+            color:blue; font-weight:bold;
+        }
+        #wrap #content p:nth-child(2):first-letter{
+            font-size:2em;
+        }
+        #wrap #content p span{font-size:2em;}
+        #wrap #content p span::selection {
+            background-color: violet;
+            color: yellow;
+        }
+        #wrap #content p:last-child::selection {
+            background-color: violet;
+            color: yellow;
+        }
+        #wrap #content{
+            border-bottom:1px solid #cccccc;
+        }
+        #wrap #footer ul {overflow:hidden;}
+        #wrap #footer ul li{ list-style:none; float:left;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>홍길동 조선의 도적</h1>
+        </div>
+        <div id="content">
+            <p>직업 : 농민무장대의 지도자</p>
+            <p>1500년(연산군 6)을 전후하여 서울 근처에서 활약하던 농민무장대의 지도자. 양반지주층을 중심으로 토지소유가 확대되면서, 토지를 잃고 지배층의 착취에 시달리던 농민들은 자기가 살던 곳에서 도망쳤다. 이들은 산속으로 피해 무장대의 기본성원이 되어 양반지주나 관청을 습격했는데, 지배층들은 이들을 「도적」이라 했다.</p>
+            <p><span>1</span>5세기 말에서 16세기 초 연산군 통치기간에는 전국 곳곳에서 이러한 농민무장대가 일어났고, 그 가운데 대표적인 것이 홍길동이 이끄는 무장대였다. 홍길동은 양반관리의 복장을 하고 스스로 「첨지」라 하면서 무장한 많은 농민을 지휘해 여러 고을의 관청들을 습격했다. 결국 체포되어 의금부에서 취조당한 기록이 남아 있다. 뒤에 그에 대한 이야기는 <홍길동전>
+                    으로 소설화되기도 한다.</p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="logo.png" alt="고용노동부 로고" /></li>
+                <li><img src="address.png" alt="회사주소" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

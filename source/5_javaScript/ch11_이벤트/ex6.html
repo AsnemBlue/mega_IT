@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        img {display:none; position:absolute; left:10px; top:0;}
+    </style>
+    <script>
+        window.onclick = function () {
+            var p = document.getElementsByTagName('p')[0];
+            p.innerHTML =
+                'screen좌표 : ' + event.screenX + ',' + event.screenY + '<br>';
+            p.innerHTML += '브라우저좌표 : ' + event.offsetX + ',' + event.offsetY;
+            var img = document.getElementsByTagName('img')[0];
+            img.style.display = 'inline';
+            img.style.left = event.offsetX + 'px';
+            img.style.top = event.offsetY + 'px';
+        }; 
+
+    </script>
+</head>
+<body>
+    <p></p>
+    <img src="img/car.gif" alt="마차" />
+</body>
+</html>

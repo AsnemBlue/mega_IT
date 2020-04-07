@@ -1,0 +1,17 @@
+﻿/* title.css */
+#wrap {
+    width: 600px;
+    margin: 10px auto;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+#wrap .title {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    text-decoration: underline;
+}
+
+#wrap hr {
+    border: 1px solid red;
+}

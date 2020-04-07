@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		document.getElementById('frm').onsubmit = function(){
+			var dansu = document.getElementsByClassName('dansu');
+			var selectedCnt = 0;
+			for(var i = 0 ; i<dansu.length ; i++)
+				selectedCnt += dansu[i].selected;
+			if(!selectedCnt){
+				alert('하나 이상 선택하세요');
+				return false;
+			}
+		};
+	};
+</script>
+</head>
+<body>
+	<!-- ch04_servlet : contextRoot -->
+	<!-- /ch04_servlet : contextPath -->
+  <form action="/ch04_servlet/Exam4_1" id="frm">
+		<h2>2~9단까지 원하는 구구단 입력</h2>
+		<select name="su" multiple="multiple" size="3">
+			<option value="2" class="dansu">2단</option>
+			<option value="3" class="dansu">3단</option>
+			<option value="4" class="dansu">4단</option>
+			<option value="5" class="dansu">5단</option>
+			<option value="6" class="dansu">6단</option>
+			<option value="7" class="dansu">7단</option>
+			<option value="8" class="dansu">8단</option>
+			<option value="9" class="dansu">9단</option>
+		</select>
+		<input type="submit" value="구구단출력">
+		<input type="button" value="경고" onclick="alert('수고한다');">
+		<!-- <button onclick="alert('수고');">경고</button> -->
+  </form>
+</body>
+</html>

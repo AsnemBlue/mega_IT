@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>        
+        #wrap {width: 300px;margin: 0 auto;border: 1px solid blue;}
+        h2{text-align:center;}
+    </style>
+    <script>
+        function go(n) {
+            var url = ['http://www.naver.com', 'http://www.daum.net',
+                'http://www.google.com', 'http://www.youtube.com'];
+            location.href = url[n];
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h2>메뉴</h2>
+        <button onclick="go(0)">네이버</button>
+        <button onclick="go(1)">다음</button>
+        <button onclick="go(2)">구글</button>
+        <button onclick="go(3)">유투브</button>
+    </div>
+</body>
+</html>

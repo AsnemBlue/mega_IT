@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="#" method="get">
+        아 이 디 : <input type="text" name="uid" value="id"/>
+        <input type="button" value="중복확인" /><br />
+        비밀번호 : <input type="password" name="upw" /><br />
+        전화번호 : <input type="tel" name="uphone1" size="3"/> -
+                   <input type="tel" name="uphone2" size="3"/> - 
+                   <input type="tel" name="uphone3" size="3"/><br />
+        사    진 : <input type="file" name="ufilename" /><br />
+        성    별 : <input type="radio" name="gender" value="m" checked="checked"/>남
+                   <input type="radio" name="gender" value="f" />여<br />
+        사용언어 : <input type="checkbox" name="lang" value="kor" checked="checked" />한국어
+                   <input type="checkbox" name="lang" value="chi" />중국어
+                   <input type="checkbox" name="lang" value="ind" />인도어<br />
+        생    일 : <input type="date" name="birth" /><br />
+        자기소개 :<br />
+        <textarea cols="25" rows="5" name="intro">소개입니다</textarea><br />
+        국   적 : <select name="nation">
+                    <option>대한민국</option>
+                    <option>중국</option>
+                    <option>인도</option>
+                  </select><br />
+        좋아하는 음식 <select name="food" multiple="multiple" size="3">
+                        <option>김치찌개</option><option>된장찌개</option>
+                        <option>불고기</option><option>셀러드</option>
+                      </select><br />
+        좋아하는 색상 <input type="color" name="color" /><br />
+        좋아하는 정도 0<input type="range" name="step" min="0" max="10" />10<br />
+        홈페이지 : <input type="url" name="homepy" /><br />
+        이메일 : <input type="email" name="mail" /><br />
+        <input type="submit" value="입력" />
+                   
+    </form>
+</body>
+</html>

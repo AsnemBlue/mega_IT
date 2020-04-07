@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child = window.open('6.html', '', 'width=300,height=2');
+        var w = screen.width / 2;
+        var h = screen.height / 2;
+        child.resizeTo(w, h);
+        child.moveTo(screen.width / 4, screen.height / 4);
+        // 창이 왔다 갔다 
+        var toggle = 1;
+        setInterval(function () {
+            if (toggle == 1) {
+                child.moveBy(30, 30);
+                toggle = 0;
+            } else {
+                child.moveBy(-30, -30);
+                toggle = 1;
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #contain{width:700px; margin:0 auto; border:1px solid black;}
+        #header{height:50px; background-color:gray;
+                text-align:center; line-height:50px;
+                font-weight:bold;
+        }
+        #wrap {width:700px; height:200px;
+               position:relative; /* 자식은 부모 밖으로 position안됨 */
+        }
+        #content1{width:400px; height:180px; background-color:red;
+                  position:absolute; top:10px; left:10px;
+                  z-index:99; /* z-index가 큰 값이 위로 */
+        }
+        #content2{width:320px; height:170px; background-color:yellow;
+                  position:absolute; top:20px; right:10px;
+                  z-index:20;
+        }
+        #footer{height:50px; background-color:gray;
+                text-align:center; line-height:50px;
+                font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <div id="header">HEADER</div>
+        <div id="wrap">
+            <div id="content1">content1</div>
+            <div id="content2">content2</div>
+        </div>
+        <div id="footer">FOOTER</div>
+    </div>
+</body>
+</html>

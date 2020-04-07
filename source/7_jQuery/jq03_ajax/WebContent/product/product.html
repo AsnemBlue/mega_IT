@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table {width:400px; margin: 0 auto;}
+		table th, input[type=button] { width:100px; background-color: #43BDE6; color:white; padding: 10px; text-align: center;}
+		table td { background-color: #AFE0F0; padding: 10px; text-align: center; }
+		table caption{padding: 5px 5px 10px; font-size: 1.2em; font-weight: bold;}
+		input[type=text]:FOCUS { background-color: lightyellow; outline: 0;}
+		#stockCnt{color:red;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#confirm').click(function(){
+				$.ajax({
+					url : 'productStock.jsp',
+					type :'get',
+					dataType: 'html',
+					data : 'pname='+$('input[name="pname"]').val(),
+					success : function(data, status){
+						$('#stockCnt').html(data);
+					}
+				});
+			});
+			$('#alert').click(function(){
+				var str = $('#stockCnt').text().trim(); // X개 재고 or 미취급상품
+				alert(str);
+			});
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<caption>오늘의 예제1</caption>
+		<tr><th>물건명</th>
+				<td style="text-align: left;"><input type="text" name="pname"><span id="stockCnt"> &nbsp; </span></td>
+		</tr>
+		<tr><td colspan="2" style="text-align: center;">
+					<button id="confirm">재고량확인</button> <button id="alert">alert</button>
+				</td>
+		</tr>
+	</table>
+</body>
+</html>

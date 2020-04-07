@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var i = function () { };//함수형 언어는 변수에 function할당 가능
+        var person = {
+            name: '윤인성',
+            age: 35,
+            eat: function (food) {
+                alert(this.name+'은 ' + food + '를 먹는다');
+            }
+        };
+        document.write(person.name + ' ' + person['age']); // 속성
+        person.eat('덮밥');        // 메서드
+        document.write(person);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

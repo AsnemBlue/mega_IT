@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+  $( function() {
+	    $( "#datepicker" ).datepicker({
+	    	dateFormat : 'yy/mm/dd',
+	    	monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	    	showMonthAfterYear : true,
+	    	yearSuffix : '년', // "2020년 3월"
+	    	showOtherMonths : true,
+	    	dayNamesMin:['일','월','화','수','목','금','토'],
+	    	minDate : 0,// 오늘 이전은 선택 불가
+	    	onSelect : function(dateText){ //dateText = 2020/03/04
+	    		$('#resultDate').html(dateText); // 선택한 날짜 출력
+	    		$('button').attr('disabled',false).css('color','black'); // 모든 버튼 초기화
+	    		var today = new Date(); // 지금 시점(날짜+시간)
+	    		var y = today.getFullYear(); // y=2020
+	    		var m = today.getMonth()+1; // m = 3
+	    		if((''+m).length == 1){ 
+	    			m = '0'+m;    // m = '03'
+	    		}
+	    		var d = today.getDate();    // d = 4  
+	    		if(d<=9){
+	    			d = '0'+d; // d='04'
+	    		}
+	    		var todayStr = y+'/'+m+'/'+d; //todayStr = 2020/03/04
+	    		if(todayStr == dateText ){ // 오늘을 선택 => 현재 시간 이전은  선택불가
+	    			var h = today.getHours(); // 현재 시간 h = 16
+	    			for(var i=9 ; i<=h ; i++){
+	    				$('#'+i).attr('disabled','disabled').css('color','#dddddd');
+	    			}//for
+	    		}//if
+	    	}//콜백함수
+	    });//datepicker함수
+	    $('#am button').click(function(){
+	    	$('#resultTime').html($('#resultTime').html()+ '오전 '+$(this).attr('class')+'시');
+	    	$(this).attr('disabled','disabled').css('color','red');
+	    });
+	    $('#pm button').click(function(){
+	    	$('#resultTime').html($('#resultTime').html()+ '오후 '+$(this).attr('class')+'시');
+	    	$(this).attr('disabled','disabled').css('color','red');
+	    });
+	  } );//ready함수
+  </script>
+</head>
+<body>
+	<h2>원하는 날짜와 시간을 선택하세요</h2>
+	<div id="datepicker"></div>
+	<div id="am">오전
+		<button id="9" class="9">9시</button>
+		<button id="10" class="10">10시</button>
+		<button id="11" class="11">11시</button>
+	</div>
+	<div id="pm">오후
+		<button id="12" class="12">12시</button>
+		<button id="13" class="1">1시</button>
+		<button id="14" class="2">2시</button>
+		<button id="15" class="3">3시</button>
+		<button id="16" class="4">4시</button>
+		<button id="17" class="5">5시</button>
+		<button id="18" class="6">6시</button>
+		<button id="19" class="7">7시</button>
+	</div>
+	<p>선택한 날짜 <span id="resultDate"></span></p>
+	<p>선택한 시간들 <span id="resultTime"></span></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

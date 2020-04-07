@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function header(n) {
+            if (n == 1) {
+                var header1 = document.querySelector('#header-1');
+                header1.style.backgroundColor = 'yellow';
+                header1.style.border = '2px solid blue';
+            } else {
+                var header2 = document.querySelector('#header-2');
+                header2.style.cssText = 'color:orange;font-size:1.5em;';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header-1" onclick="header(1)">HEADER</h1>
+    <h1 id="header-2" onclick="header(2)">HEADER</h1>
+</body>
+</html>

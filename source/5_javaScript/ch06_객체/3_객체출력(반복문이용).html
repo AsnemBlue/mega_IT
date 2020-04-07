@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr = [1, 2, 3];
+        for (var idx in arr) {
+            document.write(arr[idx] + '<br>');
+        }
+        var product = {
+            name: 'Microsoft Visual Studio',
+            price: 0,
+            language: '한국어',
+            supportOS: 'win 32/64',
+            method: function () { alert('method test');}
+        };
+        for (var key in product) {
+            if (key != 'method') { // 속성명이 method가 아닐 때(속성변수일 때)
+                document.write(product[key] + '<br>');// product.key (X)
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

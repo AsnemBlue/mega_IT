@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        while (isNaN(hakjum) || hakjum<0 || hakjum>4.5) {
+            var hakjum = Number(prompt("0~4.5사이의 학점을 입력하세요"));
+        }
+        if (hakjum >= 4.0 && hakjum <= 4.5) {
+            document.write("A학점이군요");
+        } else if (3.0 <= hakjum && hakjum < 4.0) {
+            document.write('B 학점이군요');
+        } else if (2.0 <= hakjum && hakjum < 3.0) {
+            document.write('C 학점이군요');
+        } else if (0 <= hakjum && hakjum < 2.0) {
+            document.write('분발하세요');
+        } else {
+            document.write('유효한 학점이 아닙니다');
+        }
+    </script>
+</head>
+<body></body>
+</html>

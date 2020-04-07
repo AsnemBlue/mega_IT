@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="../Ex1?id=김&pw=ppp">Ex1서블릿에게 id와 pw넘기기(G)</a>
+	<hr>
+	<button onclick="location='../Ex1?id=i&pw=p'">Ex1서블릿에게 id와 pw넘기기(G)</button>
+	<hr>
+	<form action="http://localhost:8181/ch04_servlet/Ex1" method="get">
+		<p>ID <input type="text" name="id"></p>
+		<p>PW <input type="password" name="pw"></p>
+		<p><input type="submit" value="EX1서블릿에게 id와 pw넘기기(G)"></p>
+	</form>
+	<hr>
+	<form action="/ch04_servlet/Ex1" method="post">
+		<p>ID <input type="text" name="id"></p>
+		<p>PW <input type="password" name="pw"></p>
+		<p><input type="submit" value="Ex1서블릿에게 id와 pw넘기기(POST)"></p>
+	</form>
+</body>
+</html>
+
+
+
+
+
+

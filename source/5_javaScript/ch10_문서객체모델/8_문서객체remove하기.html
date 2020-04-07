@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function remove() { // h1태그들 싹 없애기
+            var header = document.getElementById('header');
+            document.body.removeChild(header);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="remove()">header 없애기</button>
+    <h1 id="header">HEADER</h1>
+</body>
+</html>

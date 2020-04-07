@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script> //  pow(2,3) -> 2의 3승
+        var i = Number(prompt('i값은 ?'));
+        var j = Number(prompt('j값은 ? '));
+        document.write('i의 j승은 ' + pow(i, j));
+        function pow(x, y) {
+            var result = 1;
+            for (var i = 1; i <= y; i++) {
+                result *= x; //result = result * x;
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

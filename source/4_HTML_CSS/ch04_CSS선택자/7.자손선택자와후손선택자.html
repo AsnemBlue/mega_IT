@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header, #wrap, #footer{
+            border: 1px solid #cccccc; width:700px; margin:0 auto;
+        }
+        div li{ /* 후손 선택자 */
+            background-color:red;
+        }
+        div p{ /* 후손 선택자 */
+            font-weight:bold; font-size:25pt;
+        }
+        div > p{ /* 자손 선택자 */
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"> <!-- 자손(자식), 후손 -->
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="copy">
+            <h2>소설벤처</h2>
+        </div>
+    </div>
+    <div id="wrap">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <ul>
+            <li><p>Where does it come from?</p></li>
+            <li><h1>What is Lorem Ipsum?</h1></li>
+            <li><p>Where does it come from?</p></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>서울시 OO구 OO동 000 XX빌딩 0층</p>
+    </div>
+</body>
+</html>

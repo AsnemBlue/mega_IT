@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table{width:100px; margin:0 auto; border:1px solid red;}
+        table tr{background-color:yellow;}
+        table caption {color:blue;}
+        table tr:hover{background-color:orange; color:green; cursor:pointer;}
+        td{text-align:center; padding:5px;}
+    </style>
+    <script>
+        do {
+            var su = Number(prompt('보고 싶은 구구단은 ?'));
+            if (isNaN(su)) {
+                alert('숫자를 꼭 입력해야 합니다');
+            }
+        } while (isNaN(su));
+        document.write('<table>');
+        document.write('<caption>' + su + '단 구구단</caption>');
+        for (var i = 1; i <= 9; i++) {
+            document.write('<tr><td>'+su + '*' + i + '=' + (su * i) + '</td></tr>');
+        }
+        document.write('</table>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

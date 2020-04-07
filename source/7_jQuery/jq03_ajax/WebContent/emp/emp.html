@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>p{text-align: center;}</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+				url : 'emp.jsp',
+				dataType : 'html',
+				data : "ename=&job=",
+				success : function(empList, status){
+					$('#showEmp').html(empList);
+				}
+			});
+			$('.actionAjax').keyup(function(){
+				var ename = $('#ename').val().toUpperCase();
+				var job = $('#job').val().toUpperCase();
+				$('#ename').val(ename);  // 소문자일 경우 대문자로 바뀜 (input)
+				$('#job').val(job)       // 소문자일 경우 대문자로 바뀜 (input)
+				var sendData = "ename="+ename+"&job="+job;
+				$.ajax({
+					url : 'emp.jsp',
+					dataType : 'html',
+					data : sendData,
+					success : function(empList, status){
+						$('#showEmp').html(empList);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>
+		이름 <input type="text" id="ename" class="actionAjax">
+		직책 <input type="text" id="job" class="actionAjax">
+	</p>
+	<div id="showEmp"></div>
+</body>
+</html>

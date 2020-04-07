@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr1 = new Array('hij', 'abc', 'zzz');
+        var arr2 = [52, 273, 103, 57, 32];
+        document.write('정렬전의 arr1 : ' + arr1 + '<br>');
+        arr1.sort();
+        document.write('정렬후의 arr1 : ' + arr1 + '<br>');
+        document.write('정렬전의 arr2 : ' + arr2 + '<br>');
+        arr2.sort(function (left, right) {
+            //return left - right; // 오름차순 정렬
+            return right - left;   // 내림차순 정렬
+        });
+        document.write('정렬후의 arr2 : ' + arr2 + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function remove() { // h1태그들 싹 없애기
+            var h1s = document.getElementsByTagName('h1');
+            for (var i = h1s.length-1 ; i >=0 ; i--) {
+                document.body.removeChild(h1s[i]);
+            }
+        }
+        function append() { // h1태그 하나 추가하기
+            //var h1 = document.createElement('h1');
+            //var textNode = document.createTextNode('HEADER');
+            //h1.appendChild(textNode);
+            //document.body.appendChild(h1);
+            document.body.innerHTML += '<h1>HEADER</h1>';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="remove()">header 싹 없애기</button>
+    <button onclick="append()">header하나 추가하기</button>
+    <h1 id="header">HEADER</h1>
+</body>
+</html>

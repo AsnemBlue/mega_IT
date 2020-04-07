@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var won = '100원';
+        if (isNaN(parseInt(won))) {//isNaN() 숫자가 아니면 true
+            alert('숫자가 아니네');
+        }
+        var num = 100/0;
+        if (isFinite(num)) { // isFinite() 유한한 숫자면 true
+            alert('유한한 숫자네 - '+num);
+        } else {
+            alert('무한한 숫자네 - '+num);
+        }
+        document.body.style.backgroundImage='url("xx.png")';
+        document.body.style.backgroundSize ='100%';
+        document.body.style.color='yellow';
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

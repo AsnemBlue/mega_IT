@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var array = ['사과', 273, true, function () { }, [1, 2]];
+        document.write(array[0]+'<br>'); // array를 access하는 key는 index
+        var object = {
+            제품명: '7D건조망고',
+            가격: 7000,
+            성분: '망고, 설탕, 치자황색소',
+            상태: true
+        };
+        document.write(object.제품명 + ' ' + object.가격 + ' ' + object.상태 + '<br>');
+        document.write(object['제품명'] + object['가격']);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

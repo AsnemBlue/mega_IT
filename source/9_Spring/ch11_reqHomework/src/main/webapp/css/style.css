@@ -1,0 +1,24 @@
+@charset "UTF-8";
+body { 
+	background-color: lightyellow;
+	font-size: 30px;
+}
+#wrap {width:400px; margin: 10px auto;}
+#wrap .currentCnt {
+	float: right;
+	color: red;
+	font-weight: bold;
+	padding-bottom: 30px;
+}
+#wrap table{ width:400px; }
+#wrap tr:last-child td, #wrap th { padding: 5px; text-align: center;}
+#wrap tr:last-child td {padding:30px;}
+#wrap input[type=text], #wrap input[type=number] { 
+	width:250px; padding:5px; margin:5px; font-size: 1.2em;
+}
+#wrap input[type=submit] {
+	padding: 5px 30px; font-size: 1.5em;
+}
+#wrap button {
+	font-size: 1.2em;
+}

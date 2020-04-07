@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var child = open('', '', 'width=450, height=500');
+        /* window.open(속성1, 속성2, 속성3)
+         * 속성1 : url (외부url, 내부경로)
+         * 속성2 : 윈도우 이름
+         * 속성3 : width(가로), height(세로), left(창의 왼쪽위치), top(창의 윗위치)
+         *         location(1,0 yes,no), menubar, resiable, scrollbar
+         */
+        if (child) {
+            child.document.write('<h1>새창</h1>');
+        } else {
+            alert('팝업차단을 해제하셔야 새창이 열립니다');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    table{width:280px; height:80px; margin:0 auto;}
+    table tr td:nth-child(1){background-color:red;}
+    table tr td:nth-child(2){background-color:orange;}
+    table tr td:nth-child(3){background-color:yellow;}
+    table tr td:nth-child(4){background-color:green;}
+    table tr td:nth-child(5){background-color:blue;}
+    table tr td:nth-child(6){background-color:navy;}
+    table tr td:nth-child(7){background-color:violet;}
+  </style>
+  <script>
+      var color = ['white', 'red', 'orange', 'yellow', 'green', 'blue',
+          'navy', 'violet'];
+      function backcolorChange(idx) {
+        document.body.style.backgroundColor = color[idx];
+      }
+  </script>
+</head>
+<body>
+  <h6>ex1.마우스를 올리면 바탕화면도 해당 색상으로 바꾸기</h6>
+  <table>
+    <tr onmouseout="backcolorChange(0)">
+      <td onmouseover="backcolorChange(1)"></td>
+      <td onmouseover="backcolorChange(2)"></td>
+      <td onmouseover="backcolorChange(3)"></td>
+      <td onmouseover="backcolorChange(4)"></td>
+      <td onmouseover="backcolorChange(5)"></td>
+      <td onmouseover="backcolorChange(6)"></td>
+      <td onmouseover="backcolorChange(7)"></td>
+    </tr>
+  </table>
+</body>
+</html>

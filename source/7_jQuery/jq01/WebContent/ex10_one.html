@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			/* $('h2').click(function() {
+				$(this).append('♥');
+				$(this).off(); // 이벤트 제거
+			}); */
+			$('h2').one('click', function(){
+				$(this).prepend('★').append('★');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>방탄 좋아요 클릭은 한번만</h2>
+	<h2>기생충 클릭은 한번만</h2>
+</body>
+</html>

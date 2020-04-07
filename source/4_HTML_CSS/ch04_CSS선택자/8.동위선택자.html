@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        h3 ~ div { /*h3태그의 동위 선택자들 다(~)*/
+            font-size:1.3em; color:orange; font-weight:bold;
+        }
+        h3 + div{ /* h3태그의 동위선택자들 중 바로 다음 것*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>div_00</div>
+    <h3 id="title">동위(형제)선택자(+,~)</h3>
+    <!--<p>p_01</p>-->
+    <div>div_01</div>
+    <div>div_02</div>
+    <div>div_03</div>
+    <div>div_04</div>
+    <div>div_05</div>
+</body>
+</html>

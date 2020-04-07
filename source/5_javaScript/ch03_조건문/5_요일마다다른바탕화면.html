@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var today = new Date();
+        var week = today.getDay(); // 0(일),1,2,3,4,5,6
+        switch (week) {
+            case 0: document.write('일'); document.bgColor = '#ff0000'; break;
+            case 1: document.write('월'); document.bgColor = 'orange'; break;
+            case 2: document.write('화'); document.bgColor = 'yellow'; break;
+            case 3: document.write('수'); document.bgColor = 'green'; break;
+            case 4: document.write('목'); document.bgColor = 'blue'; break;
+            case 5: document.write('금'); document.bgColor = 'navy'; break;
+            case 6: document.write('토'); document.bgColor = 'purple'; break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

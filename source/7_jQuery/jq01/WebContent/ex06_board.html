@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		tr:hover { background-color: orange;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('tr').click(function(){
+				var bid = $(this).children(0).eq(0).text();
+				location.href = "ex05_selector.html?bid="+bid+"&pageNum=10";
+			});
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<tr><th>글번호</th><th>제목</th><th>글쓴이</th><th>조회수</th></tr>
+		<tr><td>5</td><td>제목5</td><td>홍길동</td><td>10</td></tr>
+		<tr><td>4</td><td>제목4</td><td>김길동</td><td>11</td></tr>
+		<tr><td>3</td><td>제목3</td><td>박길동</td><td>1</td></tr>
+		<tr><td>2</td><td>제목2</td><td>윤길동</td><td>1</td></tr>
+		<tr><td>1</td><td>제목1</td><td>신길동</td><td>2</td></tr>
+	</table>
+</body>
+</html>

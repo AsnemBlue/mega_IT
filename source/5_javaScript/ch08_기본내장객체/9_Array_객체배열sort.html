@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Student(name, k, eng, mat) {
+            this.name = name;
+            this.kor = k;
+            this.eng = eng;
+            this.mat = mat;
+        }
+        Student.prototype.getSum = function () {
+            return this.kor + this.eng + this.mat;
+        };
+        Student.prototype.toString = function () {
+            var output = ' ' +this.name + '(' + this.kor + ', ' + this.eng + ', '
+                + this.mat + ', ' + this.getSum() + ')';
+            return output;
+        };
+        var students = [new Student('홍길동', 50, 90, 99),
+                        new Student('김길동', 60, 70, 98),
+                        new Student('신길동', 99, 11, 11)];
+        document.write('전: ' + students+'<br>');
+        students.sort(function (left, right) {
+            return right.getSum() - left.getSum(); // 총점순으로 내림차순 정렬
+        });
+        document.write('총점순정렬후 :' + students + '<br>');
+        students.sort(function (left, right) {
+            return right.kor - left.kor; // kor순으로 내림차순 정렬
+        });
+        document.write('kor순정렬후 : ' + students);
+        var s = students.slice(0, 2); // 0 인덱스 부터 2인덱스 앞까지
+        document.write('슬라이스된 s : ' + s);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

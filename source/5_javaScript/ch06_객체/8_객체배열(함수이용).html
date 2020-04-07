@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function makeStudent(name, kor, mat, eng, sci) {
+            var result = {
+                'name': name, 'kor': kor, 'mat': mat, 'eng': eng, 'sci': sci,
+                'getSum': function () {
+                    return this.kor + this.mat + this.eng + this.sci;
+                },
+                'getAvg': function () {
+                    return this.getSum() / 4;
+                },
+                'toString': function () {
+                    var output = '';
+                    for (var key in this) {
+                        if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+                            output += key + ' : ' + this[key] + '<br>';
+                        } else if (key == 'getSum') {
+                            output += '총점 : ' + this.getSum() + '<br>';
+                        } else if (key == 'getAvg') {
+                            output += '평균 : ' + this.getAvg() + '<br>';
+                        } // if
+                    }//for
+                    return output;
+                }//toString
+            }; // result
+            return result;
+        }//makeStudent함수
+        var students = [];
+        students.push(makeStudent('홍길동', 80, 100, 89, 99));
+        students.push(makeStudent('마길동', 92, 100, 89, 99));
+        students.push(makeStudent('윤길동', 91, 100, 89, 99));
+        students.forEach(function (data, idx) {
+            document.write(idx + '번째 : <br>' + data + '<hr>');
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

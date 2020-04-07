@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto Condensed';
+      }
+
+      li {
+        list-style: none;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      header {
+        position: relative;
+        width: 100%;
+      }
+
+        header #h_wrap {
+          width: 900px;
+          margin: 0 auto;
+        }
+
+
+          header #h_wrap #gnb {
+            width: 900px;
+            background-color: #133038;
+            line-height: 60px;
+            height: 60px;
+            font-weight: bold;
+            position: fixed;
+            top: 50px;
+            z-index: 99999;            
+          }
+
+      #gnb ul {
+        overflow: hidden;
+        width: 900px;
+        margin: 0 auto;
+      }
+
+        #gnb ul li {
+          float: left;
+          width: 155px;
+          font-size: 1.2em;
+        }
+
+          #gnb ul li a {
+            display: block;
+            margin-left: 11px;
+          }
+
+          #gnb ul li ul {
+            display: none;
+          }
+
+            #gnb ul li ul li {
+              clear: both;
+              font-size: .8em;
+            }
+
+          #gnb ul li:hover a {
+            background-color: white;
+            color: black;
+          }
+
+          #gnb ul li:hover ul {
+            display: block;
+            position: absolute;
+            top: 60px;
+          }
+
+          #gnb ul li ul li:hover a {
+            color: #317e94;
+          }
+        #c_wrap {
+            overflow: hidden;
+            position: relative;
+            width: 900px;
+            height: 900px;
+            margin: 0 auto;
+            background-color: #ebf1f3;
+
+        }
+        #content1 {
+            position: absolute;
+            top: 120px;
+            width: 890px;
+            color: white;
+            padding-top: 60px;
+            font-weight: bold;
+            margin: 0 auto;
+            margin-left: 9px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="h_wrap">
+            <div id="gnb">
+                <ul>
+                    <li><a href="#">MENU_01</a>
+                        <ul>
+                            <li><a href="#sub1">sub1</a></li>
+                            <li><a href="#sub2">sub2</a></li>
+                            <li><a href="3.html">sub3</a></li>
+                            <li><a href="4.html">sub4</a></li>
+                            <li><a href="5.html">sub5</a></li>
+                            <li><a href="6.html">sub6</a></li>
+                            <li><a href="7.html">sub7</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MENU_02</a>
+                        <ul>
+                          <li><a href="1.html">sub1</a></li>
+                          <li><a href="2.html">sub2</a></li>
+                          <li><a href="3.html">sub3</a></li>
+                          <li><a href="4.html">sub4</a></li>
+                          <li><a href="5.html">sub5</a></li>
+                          <li><a href="6.html">sub6</a></li>
+                          <li><a href="7.html">sub7</a></li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <a href="#">MENU_03</a>
+                        <ul>
+                          <li><a href="1.html">sub1</a></li>
+                          <li><a href="2.html">sub2</a></li>
+                          <li><a href="3.html">sub3</a></li>
+                          <li><a href="4.html">sub4</a></li>
+                          <li><a href="5.html">sub5</a></li>
+                          <li><a href="6.html">sub6</a></li>
+                          <li><a href="7.html">sub7</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MENU_04</a>
+                        <ul>
+                          <li><a href="1.html">sub1</a></li>
+                          <li><a href="2.html">sub2</a></li>
+                          <li><a href="3.html">sub3</a></li>
+                          <li><a href="4.html">sub4</a></li>
+                          <li><a href="5.html">sub5</a></li>
+                          <li><a href="6.html">sub6</a></li>
+                          <li><a href="7.html">sub7</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MENU_05</a>
+                        <ul>
+                          <li><a href="1.html">sub1</a></li>
+                          <li><a href="2.html">sub2</a></li>
+                          <li><a href="3.html">sub3</a></li>
+                          <li><a href="4.html">sub4</a></li>
+                          <li><a href="5.html">sub5</a></li>
+                          <li><a href="6.html">sub6</a></li>
+                          <li><a href="7.html">sub7</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <content>
+        <div id="c_wrap">
+            <div id="content1">
+              <p>
+                What is Lorem Ipsum?
+
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+              <p>
+                What is Lorem Ipsum?
+
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div>
+        </div>
+    </content>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+table {width:60%; margin: 10px auto;}
+td, th {text-align: center; padding:10px; }
+h2, b{text-align: center; }
+a { text-decoration: none; color:black}
+.paging {text-align: center;}

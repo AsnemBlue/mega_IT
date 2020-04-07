@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var toggle = [0,0];
+        function change(n) {
+            var head = [document.getElementById('head1'),
+                        document.getElementById('head2')];
+            if (toggle[n] == 0) {
+                head[n].innerHTML = '바꿔'; toggle[n] = 1;
+            } else {
+                head[n].innerHTML = 'HEADER'; toggle[n] = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="head1">HEADER</h1>    <h1 id="head2">HEADER</h1>
+    <button onclick="change(0)" id="btn">header1 바꿔</button>
+    <button onclick="change(1)" id="btn">header2 바꿔</button>
+</body>
+</html>

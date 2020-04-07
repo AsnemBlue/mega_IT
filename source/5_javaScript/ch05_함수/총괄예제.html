@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var imgs = ['0123_img/img01.png', '0123_img/img02.png', '0123_img/img03.png'];
+    var col = ['yellow', 'black', 'red'];
+    var s = 0;
+
+    var intervalId = setInterval(function () {
+      document.write(new Date()+'<br>');
+      document.body.style.backgroundImage = 'url("'+imgs[s % 3] + '")';
+      document.body.style.backgroundSize = '100%';
+      document.body.style.color = col[s % 3];      
+      s++;
+    }, 1000);
+    setTimeout(stopInterval, 10000);
+    function stopInterval() {
+      document.write('타이머 중지합니다');
+      clearInterval(intervalId);
+    }
+    </script>
+</head>
+<body>
+</body>
+</html>

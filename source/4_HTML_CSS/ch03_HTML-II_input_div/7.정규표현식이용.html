@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body> <!-- 02 -712-6100  010-9999-9999 011-325-8565 -->
+    <form action="#" method="get">
+        전화 <input type="tel" name="phone" 
+                  pattern="\d{2,3}-[0-9]{3,4}-[0-9]{4}"
+                  placeholder="000-0000-0000"
+                  title="전화번호의 형식 000-0000-0000"
+                  autofocus="autofocus"/><br />
+        카드 <input type="text" name="cardno"
+                  pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                  placeholder="xxxx-xxxx-xxxx-xxxx"
+                  title="카드번호 형식 xxxx-xxxx-xxxx-xxxx를 따르셔야 합니다" /><br />
+        나이 <input type="number" name="age" min="1" max="120" /><br />
+        업무 <input type="text" name="job" /><br />
+        업무2 <select name="job2">
+                <option value="분석">분석</option>
+                <option value="설계">설계</option>
+                <option value="구현">구현</option>
+                <option value="테스트">테스트</option>
+                <option value="유지보수">유지보수</option>
+             </select><br />
+        업무3 <input type="text" list="jobdata" name="job" />
+            <datalist id="jobdata">
+                <option value="분석"></option>
+                <option value="설계"></option>
+                <option value="구현"></option>
+                <option value="테스트"></option>
+                <option value="유지보수"></option>
+            </datalist>
+        <input type="submit" />        
+    </form>
+</body>
+</html>

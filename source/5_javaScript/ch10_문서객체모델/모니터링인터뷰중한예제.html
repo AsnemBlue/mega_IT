@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'violet'];
+        var cnt = 0;
+        window.onload = function () {
+            var date = document.getElementById('date');
+            var time = document.getElementById('time');
+            date.innerHTML = new Date().toLocaleDateString();
+            time.innerHTML = new Date().toLocaleTimeString();
+            setInterval(function () {
+                time.innerHTML = new Date().toLocaleTimeString();
+                time.style.color = color[cnt % 7];
+                cnt++;
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    날짜 : <h2 id="date"></h2>
+    시간 : <h2 id="time"></h2>
+</body>
+</html>

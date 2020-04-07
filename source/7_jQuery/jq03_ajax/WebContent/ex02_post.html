@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				var mId = $('#mId').val();
+				$.post('idConfirm.jsp',{mId:mId}, function(data, status){
+					$('#result').html(data);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>아이디 <input type="text" name="mId" id="mId">
+						<button>중복체크</button></p>
+	<span id="result"></span>	
+</body>
+</html>

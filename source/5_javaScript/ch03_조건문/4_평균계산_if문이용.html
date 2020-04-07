@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var kor = Number(prompt('국어점수를 입력하세요', '0~100'));
+        var eng = Number(prompt('영어점수를 입력하세요', '0~100'));
+        var mat = Number(prompt('수학점수를 입력하세요', '0~100'));
+        var evg = Math.round((kor + eng + mat) / 3 *100)/100;
+        var result = '평균 : '+evg+'점<br>';
+        if (90 <= evg && evg <= 100) {
+            result += '평가 : 수';
+        } else if (80 <= evg && evg < 90) {
+            result += '평가 : 우';
+        } else if (70 <= evg && evg < 80) {
+            result += '평가 : 미';
+        } else if (60 <= evg && evg < 70) {
+            result += '평가 : 양';
+        } else if (0 <= evg && evg < 60) {
+            result += '평가 : 가';
+        } else {
+            result += '유효하지 않는 점수를 입력하셨네요';
+        }
+        document.write('<h2>'+result+'</h2>');
+    </script>
+</head>
+<body></body>
+</html>

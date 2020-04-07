@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rect(w, h) {
+            if (w < 0) {
+                throw '음수길이';
+            } else {
+                var width = w;
+            }            
+            var height = h;
+            this.getWidth = function () { return width; };
+            this.getHeight = function () { return height; };
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw '음수길이';
+                } else {
+                    width = w;
+                }
+            };
+            this.setHeight = function (h) { height = h; };
+            this.getArea = function () { return width * height;};
+        }
+        try {
+            var rect1 = new Rect(10, 20);
+        } catch (e) {
+            location.href = '공사중.html';
+        }
+        document.write('rect1의 가로 ' + rect1.getWidth() + '<br>');
+        document.write('rect1의 세로 ' + rect1.getHeight() + '<br>');
+        document.write('rect1의 넓이는 ' + rect1.getArea() + '<br>');
+        rect1.setWidth(5);
+        rect1.setHeight(5);
+        document.write('<h2>rect1수정후</h2>');
+        document.write('rect1의 가로 ' + rect1.getWidth() + '<br>');
+        document.write('rect1의 세로 ' + rect1.getHeight() + '<br>');
+        document.write('rect1의 넓이는 ' + rect1.getArea() + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

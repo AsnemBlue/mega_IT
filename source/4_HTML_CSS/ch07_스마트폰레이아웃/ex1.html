@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,
+        user-scalable=no, initial-scale=1.0"/>
+    <title></title>
+    <style>
+        /* * 페이지 초기화 * */
+        *{margin:0; padding:0; }
+        li{list-style:none;}
+        a{text-decoration:none;}
+        /* * HEADER * */
+        header#header {
+            height : 45px; line-height: 45px; text-align:center; /* 글씨 가운데 */
+            background-image:url('0121_imgEx1/bg_header.png');
+            position:relative;
+        }
+        header .left{position:absolute; left:10px; top:7px;}
+        header .right{position:absolute; right:10px; top:7px;}
+        /* * * #gnb * * */
+        #gnb ul{overflow:hidden; border:5px solid gray;}
+        #gnb ul li{
+            float:left; width:10%; margin:1.25%;
+            border:1px solid gray;
+            box-sizing:border-box;
+            text-align:center;
+        }
+        /* checked 상태일때만 보임. unchecked 상태일 때는 안 보임*/
+        #gnb{display:none;}
+        #toggle:checked  ~ #gnb {display:block;} 
+        #toggle{display:none;}
+        /* * * #lnb * * */
+        #lnb ul {overflow:hidden;}
+        #lnb ul li{
+            float:left; width:20%;
+            border:1px solid white;
+            box-sizing:border-box;
+            height:60px; line-height:60px; text-align:center;
+            background-color: #137163;
+            font-weight:bold;
+        }
+        #lnb ul li a{color:white;}
+        /* #content */
+        #content{padding:10px; color:#333333;}
+        #content #content_header{padding:10px; 
+            border-bottom: 1px solid gray;
+        }
+        #content #content_body p:first-child{
+            color:deepskyblue;
+            font-weight:bold;
+            padding:10px 0;/* 좌우 padding은 없고 상하 padding 만 줌*/
+        }
+        #content #content_body p:last-child{
+            /*background-image:url('0121_imgEx1/bg_image.jpg');
+            background-repeat:no-repeat;
+            background-position:-500px 0;*/
+            background:url('0121_imgEx1/bg_image.jpg') no-repeat -500px 0;
+            padding:10px;
+            font-weight:bold;
+        }
+        footer#footer{margin:10px;}
+        footer .logo{padding:5px 0;
+                     border-top: 1px solid gray;
+                     border-bottom:1px solid gray;
+                     text-align:center;
+        }
+        footer .logo img{width:250px;}
+        footer .info{text-align:center; font-size:1.3em;
+                     padding:10px 0;
+        }
+        footer .address{text-align:center; font-size:1.1em;}
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="toggle" />
+    <header id="header">
+        <a href="#" class="left">
+            <img src="0121_imgEx1/category.png" />
+        </a>
+        <h1>Mobile</h1>
+        <label for="toggle" class="right">
+          <img src="0121_imgEx1/menu.png" />
+        </label>
+    </header>
+    <div id="gnb">
+        <ul>
+            <li><a href="#none">gnb1</a></li><li><a href="#n">gnb2</a></li>
+            <li><a href="#none">gnb3</a></li><li><a href="#n">gnb4</a></li>
+            <li><a href="#none">gnb5</a></li><li><a href="#n">gnb6</a></li>
+            <li><a href="#none">gnb7</a></li><li><a href="#n">gnb8</a></li>
+        </ul>
+    </div>
+    <div id="lnb">
+        <ul>
+            <li><a href="#lnb1">lnb1</a></li><li><a href="#lnb2">lnb2</a></li>
+            <li><a href="#lnb3">lnb3</a></li><li><a href="#lnb4">lnb4</a></li>
+            <li><a href="#lnb5">lnb5</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="content_header">
+            <h1>홍길동</h1>
+        </div>
+        <div id="content_body">
+            <p>홍길동 기사의 서브 제목</p>
+            <p>1500년(연산군 6)을 전후하여 서울 근처에서 활약하던 농민무장대의 지도자. 양반지주층을 중심으로 토지소유가 확대되면서, 토지를 잃고 지배층의 착취에 시달리던 농민들은 자기가 살던 곳에서 도망쳤다. 이들은 산속으로 피해 무장대의 기본성원이 되어 양반지주나 관청을 습격했는데, 지배층들은 이들을 「도적」이라 했다</p>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="logo"><img src="https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png" /></div>
+        <div class="info">XX 주식회사</div>
+        <div class="address">서울시 XX구 XX동 XX빌딩 803호</div>
+    </footer>
+</body>
+</html>

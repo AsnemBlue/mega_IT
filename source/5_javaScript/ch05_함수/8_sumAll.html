@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var sumAll = function() {
+            var result = 0;
+            for (var idx = 0; idx < arguments.length; idx++) {
+                result += arguments[idx];
+            }
+            return result;
+        }
+        var sum = sumAll(1, 2); //3
+        document.write(sum + '<br>');
+        sum = sumAll(1); //1
+        document.write(sum + '<br>');
+        sum = sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); //55
+        document.write(sum + '<br>');
+        sum = sumAll(); // 0
+        document.write(sum + '<br>');
+        function sumAll() { }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

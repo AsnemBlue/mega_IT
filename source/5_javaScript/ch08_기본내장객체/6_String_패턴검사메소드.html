@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var str = 'abc@abc';
+        var patternNum = /[0-9]/;    // 정규표현식으로 나타낸 숫자패턴
+        var patternEng = /[a-zA-Z]/; // 정규표현식으로 나타낸 문자패턴
+        var patternKor = /[가-힣]/;  // 정규표현식으로 나타낸 한글문자패턴
+        var patternSpe = /[~!@#$%^&*()_+|<>?:{}]/; // 특수문자패턴
+        document.write('숫자가 포함되었는지 : ' + patternNum.test(str) + '<br>');
+        document.write('영문이 포함되었는지 : ' + patternEng.test(str) + '<br>');
+        document.write('한글이 포함되었는지 : ' + patternKor.test(str) + '<br>');
+        document.write('특수문자 포함되었는지 : ' + patternSpe.test(str) + '<br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

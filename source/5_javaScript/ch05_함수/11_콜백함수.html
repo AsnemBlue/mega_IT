@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        // 콜백함수 : 매개변수로 들어온 함수
+        function callTenTimes(callback) {
+            for (var i = 0; i < 10; i++) {
+                callback();
+            }
+        }
+        var funVar = function () {
+            document.write(new Date()+'<br>');
+        };
+        callTenTimes(funVar);
+        callTenTimes(function () { document.write('함수호출');});// ★★★
+    </script>
+</head>
+<body></body>
+</html>

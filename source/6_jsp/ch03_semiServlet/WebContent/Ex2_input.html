@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="/ch03_semiServlet/css/ex3.css" rel="stylesheet">
+<script>
+	window.onload = function(){
+		document.getElementById('frm').onsubmit = function (){
+			var num = document.getElementsByName('num')[0];
+			var su = Number(num.value);
+			if(isNaN(su) || su<=0 || num.value.trim().indexOf('.')!=-1){
+				alert('자연수만 입력하세요');
+				num.value = '';
+				num.focus();
+				return false;
+			}			
+		};
+		/* document.getElementById('frm').onsubmit = function (){
+			var num = document.getElementsByName('num')[0];
+			var su = Number(num.value.trim());
+			if(isNaN(su) || su<=0 || su!=Math.trunc(su)){
+				alert('자연수만 입력하세요');
+				num.value = '';
+				num.focus();
+				return false;
+			}			
+		}; */ 
+	};
+</script>
+</head>
+<body>
+	<h2>1부터 얼마까지 누적할지 자연수를 입력하세요</h2>
+	<form action="Ex2" method="get" id="frm">
+		<input type="text" name="num">
+		<input type="submit" value="누적결과">
+	</form>
+</body>
+</html>

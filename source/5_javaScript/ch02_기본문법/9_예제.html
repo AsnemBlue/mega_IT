@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var kor, eng;
+    do {
+      kor = Number(prompt("국어점수를 입력하세요", "0~100사이"));
+     if (kor>=0 && kor<=100) {
+        break;
+     }
+    } while (true);
+    do {
+      eng = parseInt(prompt("영어점수를 입력하세요", "0~100사이"));
+      if (!isNaN(eng) && eng >= 0 && eng <= 100) {
+        break;
+      }
+    } while (true);
+    var sum = kor + eng;
+    document.write("국어와 영어점수합은" + sum);
+    </script>
+</head>
+<body></body>
+</html>

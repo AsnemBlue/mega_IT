@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var id = setInterval(function () {
+            document.write(new Date() + '<br>');
+        }, 1000); //setInterval():일정시간마다 콜백함수 실행
+        setTimeout(function () { clearInterval(id); }, 10000);
+          // clearInterval(id) : 셋팅된 setInterval() 타이머 중지
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		document.getElementsByTagName('form')[0].onsubmit = function(){
+			var opt = document.getElementsByClassName('opt');
+			var optSelectedCnt = 0;
+			for(var i=0 ; i<opt.length ; i++){
+				if(opt[i].selected){
+					optSelectedCnt++;
+				}
+			}
+			if(!optSelectedCnt){
+				alert('한개 이상은 선택하셔야 됩니다');
+				return false;
+			}
+		};
+	};
+</script>
+</head>
+<body>
+	<h2>2~9단까지 하나는 선택</h2>
+	<form action="#">
+		<select name="su" multiple="multiple" size="5">
+			<option class="opt">2단</option><option class="opt">3단</option>
+			<option class="opt">3단</option><option class="opt">4단</option>
+			<option class="opt">5단</option><option class="opt">6단</option>
+		</select>
+		<input type="submit">
+	</form>
+</body>
+</html>

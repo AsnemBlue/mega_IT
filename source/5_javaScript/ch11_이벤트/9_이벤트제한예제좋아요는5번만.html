@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        span:nth-child(1) {color:red;}
+        span:nth-child(2) {color:orange;}
+        span:nth-child(3) {color:yellow;}
+        span:nth-child(4) {color:green;}
+        span:nth-child(5) {color:blue;}
+    </style>
+    <script>
+        var cnt = 0;
+        window.onload = function () {
+            var h1 = document.getElementsByTagName('h1')[0];
+            h1.onclick = function () {
+                this.innerHTML += '<span>♡</span>';
+                if (++cnt >= 5) {
+                    h1.onclick = null;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>좋아요</h1>
+</body>
+</html>

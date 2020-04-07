@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#n1').val(parseInt(Math.random()*10));
+			$('#n2').val(parseInt(Math.random()*10));
+			var opArray = ['+','-','*','/'];
+			var opIdx = parseInt(Math.random()*4); // 0~3
+			$('#operation').html('<b>'+opArray[opIdx]+'</b>');
+			// 정답 계산 부분
+			var n1 = Number($('#n1').val());
+			var n2 = Number($('#n2').val());
+			var answerTemp = [n1+n2, n1-n2, n1*n2, n1/n2];
+			var answer = answerTemp[opIdx];			
+			$('#cal').click(function(){
+				if(!isFinite(answer)){
+					$('.result').html('미안 0으로 나누는 문제잖아');
+				}else if($('#answer').val()==answer){
+					$('.result').html(n1+opArray[opIdx]+n2+'='+answer+'는 맞습니다').css('color','blue');
+				}else{
+					$('.result').html(n1+opArray[opIdx]+n2+'='
+							+$('#answer').val()+'는 틀립니다').css('color','red');
+				}
+			});
+			$('#reset').click(function(){
+				$('#n1').val(parseInt(Math.random()*10));
+				$('#n2').val(parseInt(Math.random()*10));
+				$('#answer').val('');
+				opIdx = parseInt(Math.random()*4); // 0~3
+				$('#operation').html('<b>'+opArray[opIdx]+'</b>');
+				// 정답 계산 부분
+				n1 = $('#n1').val();
+				n2 = $('#n2').val();
+				answerTemp = [n1+n2, n1-n2, n1*n2, n1/n2];
+				answer = answerTemp[opIdx];
+				$('.result').text('');
+			});
+		});
+	</script>
+	<style>
+		p, h1 {text-align: center;}
+		button{padding:10px; margin: 10px 40px;}
+	</style>
+</head>
+<body>
+		<p>
+			2단계 : 
+			<input type="text" id="n1" size="5" readonly="readonly">
+			<span id="operation"></span>
+			<input type="text" id="n2" size="5"> =
+			<input type="text" id="answer" size="5" placeholder="답" >
+		</p>
+		<p><button id="reset">다시해봐</button><button id="cal">채점해봐</button></p>
+		<hr>
+		<h1 class="result"></h1>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>b{color:red;}</style>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#p1').click(function(){
+				// id가 p1인 것을 click할 때 할 일
+				$('#p1').html('<b>태그 내용 바뀜</b>');
+				//$(this).text('태그 내용 바뀜');
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="p1">p태그 하나</p>
+</body>
+</html>

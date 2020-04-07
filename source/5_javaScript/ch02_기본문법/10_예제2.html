@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function chk() {
+      if (frm.name.value.length < 2) {
+        alert('이름은 두글자 이상');
+        frm.name.focus();
+        return false;
+      }
+      var age = Number(frm.age.value);
+      if (isNaN(age) || age < 0 || age > 120) {
+        alert('유효한 나이가 아닙니다.');
+        frm.age.focus();
+        return false;
+      }
+      if (!frm.addr.value) { // (cf) === 일치연산자(값,타입)
+        alert('주소를 입력하세요');
+        frm.addr.focus();
+        return false;
+      }      
+      return true;
+    }
+  </script>
+  <style>
+    table {width:250px; margin:0 auto;border:1px solid cornflowerblue;}
+    td {text-align:center; padding:5px;}
+  </style>
+</head>
+<body>
+    <form action="#" name="frm" onsubmit="return chk()">
+      <table>
+        <tr>
+          <th>이름</th>
+          <td><input type="text" name="name" placeholder="이름은 2글자 이상"/></td>
+        </tr>
+        <tr>
+          <th>나이</th>
+          <td><input type="text" name="age" placeholder="나이는 0~120까지"/></td>
+        </tr>
+        <tr>
+          <th>주소</th>
+          <td><input type="text" name="addr" placeholder="주소는 입력만"/></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="입력" /></td>
+        </tr>
+      </table>
+    </form>
+</body>
+</html>

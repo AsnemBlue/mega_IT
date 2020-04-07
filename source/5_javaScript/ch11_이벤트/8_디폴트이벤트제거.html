@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            document.getElementById('myForm').onsubmit = function () {
+                var pw = document.getElementById('pw');
+                var pwChk = document.getElementById('pwChk');
+                if (pw.value != pwChk.value) {
+                    alert('비밀번호가 다릅니다. 확인요망');
+                    pw.value = '';
+                    pwChk.value = '';
+                    return false; // 디폴트 이벤트 제한
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <form action="#" id="myForm">
+        <p>ID <input type="text" name="id" id="id" /></p>
+        <p>PW <input type="password" name="pw" id="pw" /></p>
+        <p>PW <input type="password" name="pwChk" id="pwChk"/></p>
+        <p><input type="submit" /></p>
+    </form>
+</body>
+</html>

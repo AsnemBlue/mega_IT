@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TEXT NODE</title>
+    <script>
+        window.onload = function () {
+            // h1태그와 textNode를 생성 (1)
+            var h1 = document.createElement('h1');
+            var textNode = document.createTextNode('추가한 텍스트');
+            // 생성된 node를 연결
+            h1.appendChild(textNode);
+            document.body.appendChild(h1);
+            // img태그 노드 생성 (2)
+            var img = document.createElement('img');
+            img.setAttribute('src', 'img/orange.jpg');
+            img.setAttribute('alt', '추가한 오렌지');
+            document.body.appendChild(img);
+        };
+    </script>
+</head>
+<body>
+    <h1>TEXT NODE</h1>
+    <img src="img/orange.jpg" alt="오렌지">
+</body>
+</html>

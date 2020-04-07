@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var h1 = document.querySelector('h1');
+            h1.onclick = function () {
+                alert('좋아요는 한번만 가능. 취소불가');
+                this.style.color = 'red';
+                this.onclick = null; // 이벤트 제거
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>♡ 좋아요</h1>
+</body>
+</html>

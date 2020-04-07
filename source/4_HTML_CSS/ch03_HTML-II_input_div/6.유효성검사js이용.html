@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function chk() {
+            if (frm.id.value.length < 4) {
+                alert("id는 4글자이상이어야 합니다");
+                frm.id.focus();
+                return false;
+            } else if (!frm.pw.value) {
+                alert("비밀번호를 입력하셔야 합니다");
+                frm.pw.focus();
+                return false;
+            } else if (frm.pw.value != frm.pwchk.value) {
+                alert('비밀번호가 일치하지 않습니다');
+                frm.pw.value = "";
+                frm.pwchk.value = "";
+                frm.pw.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get" onsubmit="return chk()" name="frm">
+        I D <input type="text" name="id" /><br />
+        P W <input type="password" name="pw" /><br />
+        PW 체크<input type="password" name="pwchk" /><br />
+        <input type="submit" value="전송"/>
+    </form>
+</body>
+</html>

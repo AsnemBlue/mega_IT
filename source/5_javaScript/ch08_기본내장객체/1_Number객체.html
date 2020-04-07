@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var priNumber = 273;   // 객체변수 priNumber = new Number(273);
+        var objNumber = new Number(273);// 객체변수
+        document.write('priNumber의 타입은 ' + typeof (priNumber) + '<br>');
+        document.write('objNumber의 타입은 ' + typeof (objNumber) + '<br>');
+        // constructor: 생성자 함수
+        document.write('priNumber생성시 생성자 : ' + priNumber.constructor + '<br>');
+        document.write('objNumber생성시 생성자 : ' + objNumber.constructor + '<br>');
+        // Number 객체에 method1추가
+        Number.prototype.method1 = function () { alert('Number타입은 다 써'); };
+        priNumber.method1();
+        objNumber.method1();
+        objNumber.method2 = function () { alert('objNumber만 써'); };
+        objNumber.method2();
+        //priNumber.method2(); 실행불가
+        priNumber.method3 = function () { alert('되나보자'); };
+        //priNumber.method3(); 타입이 object가 아니라 속성 추가가 불가
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var arr1 = array();  // arr1 = []
+        document.write('arr1 = ' + arr1 + ' -방수=' + arr1.length + '<br>');
+        var arr2 = array(5);
+        document.write('arr2 = ' + arr2 + ' -방수=' + arr2.length + '<br>');
+        var arr3 = array(273, 12, 3, 'hello');
+        document.write('arr3= ' + arr3 + ' -방수=' + arr3.length + '<br>');
+        function array() {
+            result = [];
+            if (arguments.length == 1) { //매개변수가 1개
+                for (var i = 1; i <= arguments[0]; i++) {
+                    result.push('');// 빈배열방하나 추가하기
+                }
+            } else if (arguments.length >= 2) { // 매개변수가 2개 이상
+                for (var i = 0; i < arguments.length; i++) {
+                    result.push(arguments[i]);
+                }
+            }
+            return result;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

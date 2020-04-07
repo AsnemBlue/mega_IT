@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var startTime = new Date().getTime();
+        var cnt = 0;
+        do {
+            cnt++;
+        } while (new Date().getTime() < startTime + 1000);
+        document.write(cnt + '번 수행<br>');
+        startTime = new Date().getTime();//시작시 밀리세컨
+        for (var cnt = 0; new Date().getTime() < startTime + 1000; cnt++) {
+        }
+        document.write(cnt+'번 수행')
+    </script>
+</head>
+<body>
+
+</body>
+</html>

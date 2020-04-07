@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var col = ['yellow', 'black', 'red'];
+    var s = 0;
+    var intervalId = setInterval(function () {
+      document.write(new Date()+'<br>');
+      document.body.style.backgroundImage
+            = 'url("0123_img/img0' + ((s% 3)+1) + '.png")';
+      document.body.style.backgroundSize = '100%';
+      document.body.style.color = col[s % 3];      
+      s++;
+    }, 1000);
+    setTimeout(function () {
+      document.write('타이머 중지합니다');
+      clearInterval(intervalId);
+    }, 10000);
+  </script>
+</head>
+<body>
+</body>
+</html>

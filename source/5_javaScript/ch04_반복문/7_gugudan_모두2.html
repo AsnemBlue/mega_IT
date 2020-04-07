@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    table{
+      width:800px; margin:0 auto; border:2px solid red;
+    }
+    tr{ background-color: yellow; }
+    tr:hover{
+      background-color:orange; color:green;cursor: pointer;
+    }
+    td, th{ text-align:center; padding:5px; }
+    caption{font-size:2em; font-weight:bold; padding:10px;}
+  </style>
+  <script>
+    document.write("<table>");
+    document.write("<caption>2번 문제. 구구단</caption><tr>");
+    for (var i = 2; i <= 9; i++) {
+      document.write("<th>" + i + "단</th>");
+    }
+    document.write("</tr>");
+    for (var j = 1; j <= 9; j++) {
+      document.write("<tr>");
+      for (var k = 2; k <= 9; k++) {
+        document.write("<td>" + k + " * " + j + " = " + (k * j) + "</td>");
+      }
+      document.write("</tr>");
+    }
+    document.write("</table>");
+  </script>
+</head><body></body></html>

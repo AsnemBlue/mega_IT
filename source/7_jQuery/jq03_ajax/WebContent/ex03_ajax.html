@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				var mId = $('#mId').val();
+				$.ajax({
+					// url : 요청경로
+					// type : get방식 / post 방식
+					// data : 요청 파라미터와 파라미터값
+					// dataType : html/json/... 요청경로로 실행한 결과의 타입
+					// success : 요청경로로 실행한 응답이 성공하였을 때 수행할 콜백함수
+					// error :  요청경로로 실행한 응답이 실패되었을 때 수행할 콜백함수
+					url : 'idConfirm.jsp',
+					type : 'get',
+					data : 'mId='+mId,
+					dataType : 'html',
+					success : function(data){
+						$('#result').html(data);
+					},
+					error : function(code){
+						alert(code.status);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>아이디 <input type="text" name="mId" id="mId">
+						<button>중복체크</button></p>
+	<span id="result"></span>	
+</body>
+</html>

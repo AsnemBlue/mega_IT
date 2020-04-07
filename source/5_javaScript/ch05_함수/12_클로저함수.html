@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function test(name) {
+            var msg = 'Hello, ' + name + '님 방가방가';
+            return function () { alert(msg); }; // 클로저함수:return된 함수
+        }
+        //var fun = test('홍길동');
+        //fun(); // alert뿌림
+        test('홍길동')();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+      document.write('<h2>Number함수 이용</h2>');
+      var str = 'a';
+      var i = Number(str);
+      document.write('str=' + str + ' - str의 타입=' + typeof (str) + '<br>');
+      document.write('i=' + i + ' - i의 타입=' + typeof (i) + '<br>');
+      document.write('<h2>parseInt함수 이용</h2>');
+      var str = 'a';
+      var i = parseInt(str);
+      document.write('str=' + str + ' - str의 타입=' + typeof (str) + '<br>');
+      document.write('i=' + i + ' - i의 타입=' + typeof (i) + '<br>');
+      if (isNaN(i)) { //i가 NaN이면 true, NaN이 아니면 false를 리턴
+          document.write('수가 아니였네');
+      } else {
+          document.write('수였네');
+      }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

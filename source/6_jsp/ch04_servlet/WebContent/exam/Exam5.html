@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		document.getElementsByTagName('form')[0].onsubmit = function(){
+			var backColor = document.getElementsByName('backColor');
+			var colorChk = 0;
+			for(var i = 0; i<backColor.length ; i++){
+				colorChk += backColor[i].checked;
+			}
+			if(!colorChk){
+				alert('색상을 선택하셔야 합니다');
+				return false;
+			}
+		};
+		document.getElementsByTagName('form')[1].onsubmit = function(){
+			var backColorIdx = document.getElementsByName('backColorIdx');
+			var colorChk1 = 0;
+			for(var i = 0; i<backColorIdx.length ; i++){
+				colorChk1 += backColorIdx[i].checked;
+			}
+			if(!colorChk1){
+				var backColor = document.getElementsByName('backColor');
+				var idx;
+				for(idx = 0; idx<backColor.length ; idx++){
+					if(backColor[idx].checked)
+						break;
+				}
+				if(idx==backColor.length){
+					alert('색상을 선택하셔야 합니다');
+					return false;
+				}else{
+					location.href = '../Exam5?backColor='+backColor[idx].value;
+					return false;
+				}
+			}
+		};
+	};
+</script>
+</head>
+<body>
+	<fieldset>
+		<legend>배경색 선택(GET방식)</legend>
+		<form action="../Exam5" method="get">			
+			빨강<input type="radio" name="backColor" value="red">
+			주황<input type="radio" name="backColor" value="orange">
+			노랑<input type="radio" name="backColor" value="yellow">
+			초록<input type="radio" name="backColor" value="green">
+			파랑<input type="radio" name="backColor" value="blue">
+			남색<input type="radio" name="backColor" value="navy">
+			보라<input type="radio" name="backColor" value="violet">
+			<input type="submit" value="선택확인">
+		</form>
+	</fieldset>
+	<fieldset>
+		<legend>배경색 선택(POST방식)</legend>
+		<form action="../Exam5" method="post">			
+			빨강<input type="radio" name="backColorIdx" value="0">
+			주황<input type="radio" name="backColorIdx" value="1">
+			노랑<input type="radio" name="backColorIdx" value="2">
+			초록<input type="radio" name="backColorIdx" value="3">
+			파랑<input type="radio" name="backColorIdx" value="4">
+			남색<input type="radio" name="backColorIdx" value="5">
+			보라<input type="radio" name="backColorIdx" value="6">
+			<input type="submit" value="선택확인">
+		</form>
+	</fieldset>
+</body>
+</html>
