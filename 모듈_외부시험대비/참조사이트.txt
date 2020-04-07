@@ -1,0 +1,4 @@
+모듈참조와 과정평가형자격정보처리에 대한 참조
+
+1. 모듈 다운은 http://www.ncs.go.kr에서 다운받는다.
+2. 과정평가형정보처리 : https://c.q-net.or.kr/cbq/introduce/examMethInfoList.do
