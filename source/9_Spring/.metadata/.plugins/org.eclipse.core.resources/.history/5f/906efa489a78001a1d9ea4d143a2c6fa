@@ -28,7 +28,7 @@
 				<select name="schItem">
 					<option value=""
 						<c:if test="${param.schItem=='' }">selected="selected"</c:if>
-						>검색조건</option>
+						></option>
 					<option value="all"
 						<c:if test="${param.schItem=='all' }">selected="selected"</c:if>
 						>책이름+저자</option>
